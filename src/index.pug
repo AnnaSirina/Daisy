@@ -14,7 +14,7 @@ html(lang="en")
         .container.intro-section__container
           header 
             .header__logo 
-              //+icon("images/hexagon.svg", "logo__icon")
+              +image("content/D.png", "logo__icon")
               .header__name Daisy 
             .header__menu
               nav.nav
@@ -24,11 +24,14 @@ html(lang="en")
                     li.nav__item
                       a(href="").nav__link #{item}
           .aboutus
-            h1 Clients in your business
-            h2 Your clients on the Internet. Learn how to receive them.
+            h1.aboutus__header 
+              span.aboutus__header-red Clients 
+              span.aboutus__header-white in your business
+            h2.aboutus__smallheader Your clients on the Internet. Learn how to receive them.
             .aboutus__click
               button.aboutus__btn i want clients
               +image("content/mouse.png", "aboutus__icon")
-
+          .intro-section__scroll
+            +icon("arrow-down", 'scroll__icon')
 
     include ./templates/entry.pug
