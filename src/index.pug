@@ -9,8 +9,7 @@ html(lang="en")
     title Daisy | main page
   body
     .wrapper
-      .intro-section
-        
+      section.intro-section        
         .container.intro-section__container
           header 
             .header__logo 
@@ -29,9 +28,68 @@ html(lang="en")
               span.aboutus__header-white in your business
             h2.aboutus__smallheader Your clients on the Internet. Learn how to receive them.
             .aboutus__click
-              button.aboutus__btn i want clients
+              button.d__btn i want clients
               +image("content/mouse.png", "aboutus__icon")
-          .intro-section__scroll
+          a.scroll(href='#receive')
             +icon("arrow-down", 'scroll__icon')
+      
+      section.receive-section#receive
+        .container.receive-section__container
+          h2.receive__header
+            span.receive__header-black what can   
+            span.receive__header-red  you receive
+          .receive__desc Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?
+          ul.receive__points
+            - 
+              var items = [
+                ['Clients', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?'],
+                ['Profit', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?'],
+                ['Marketing', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?'],
+                ['ADV.', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?']
+              ]
+            each item in items
+              li.receive__desc-item
+                .receive__hexagon
+                .receive__topic #{item[0]}
+                .receive__value #{item[1]}
+          a.scroll.scroll-tranparent(href='#expend')
+            +icon("arrow-down", 'scroll__icon-tansparent')
+
+      section.expend-section#expend
+        .container.expend-section__container
+          .expend__border
+            h2.expend__title
+              span.expend__title-red Expend
+              span.expend__title-white your business
+            button.d__btn.d__btn-expend Join us
+          a.scroll.scroll-expend(href='#wedo')
+            +icon("arrow-down", 'scroll__icon')
+
+      section.wedo-section#wedo
+        .container.wedo-container
+          h2.wedo-title
+            span.wedo-title-grey What do
+            span.wedo-title-red we do?
+          .wedo__desc
+            .wedo__text
+              .wedo__title Landing Pages
+              .wedo__about Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident alias cum obcaecati expedita incidunt repellendus similique? Hic aspernatur laborum placeat in aliquam doloremque eveniet at illo assumenda vitae, consequuntur vero? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis nobis, eius tempora placeat, corporis nihil doloremque eveniet ratione ut, magni saepe quam sequi. Molestiae fugiat maiores illo neque quidem!
+              btn.d__btn.d__btn-red More details
+            .wedo__pic
+              +image("content/device.png", "wedo__picture")
+          a.scroll.scroll-tranparent(href='#adv')
+            +icon("arrow-down", 'scroll__icon-tansparent')
+      
+      section.adv-section#wedo
+        .container.adv-container
+          .wedo__desc.wedo__desc-secondpage#adv
+            .wedo__pic
+              +image("content/mac.png", "wedo__picture")
+            .wedo__text
+              .wedo__title.wedo__title-secondpage Advertising
+              .wedo__about Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident alias cum obcaecati expedita incidunt repellendus similique? Hic aspernatur laborum placeat in aliquam doloremque eveniet at illo assumenda vitae, consequuntur vero? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis nobis, eius tempora placeat, corporis nihil doloremque eveniet ratione ut, magni saepe quam sequi. Molestiae fugiat maiores illo neque quidem!
+              btn.d__btn.d__btn-red More details
+          //a.scroll.scroll-tranparent(href='#expend')
+            //+icon("arrow-down", 'scroll__icon-tansparent')
 
     include ./templates/entry.pug

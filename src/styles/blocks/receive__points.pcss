@@ -1,0 +1,39 @@
+.receive__points {
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+
+.receive__desc-item {
+    margin-right: 15px;
+}
+.receive__desc-item:nth-child(4) {
+    margin-right: 0;
+}
+
+.receive__topic {
+    font-size: 20px;
+    color: $grey-text;
+    position: relative;
+    text-align: center;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    margin-bottom: 15px; 
+}
+
+.receive__topic:after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:40%;
+    width:20%;
+    height:2px;
+    background: $grey-text;  
+}
+
+.receive__value {
+    font-size: 15px;
+    color: $grey-text-light;
+    text-align: center;
+}

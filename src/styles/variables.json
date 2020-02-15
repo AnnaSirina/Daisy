@@ -6,5 +6,7 @@
   "bp-tablets": "768px",
   "bp-phones": "480px",
   "ipadpro": "1024px",
-  "red": "#fc635e"
+  "red": "#fc635e",
+  "grey-text": "#868686",
+  "grey-text-light": "#adadad"
 }

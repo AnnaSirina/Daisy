@@ -1,9 +1,24 @@
-.intro-section__scroll {
+.scroll {
   border-radius: 50%;
   background: $red;
-  max-width: 35px;
+  min-width: 35px;
   min-height: 35px;
   text-align: center;
+  margin-bottom: 3%;
+  transition: 0.5s;
+
+  &:hover {
+    background: transparent;
+    border: 2px solid $red;
+    min-width: 40px;
+    min-height: 40px;
+
+  }
+}
+
+.scroll-expend {
+  margin-bottom: 0;
+  margin-top: 3%;
 }
 
 .scroll__icon {
@@ -13,3 +28,18 @@
   transform: rotate(90deg);
   margin-top: 15%;
 }
+
+
+.scroll__icon-tansparent {
+  fill: $red;
+  max-width: 25px;
+  max-height: 25px;
+  transform: rotate(90deg);
+  margin-top: 15%;
+}
+
+.scroll-tranparent {
+  background: white;
+  border: 1px solid $red;
+}
+
