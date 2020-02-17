@@ -70,26 +70,39 @@ html(lang="en")
           h2.wedo-title
             span.wedo-title-grey What do
             span.wedo-title-red we do?
+          
           .wedo__desc
             .wedo__text
-              .wedo__title Landing Pages
+              .wedo__name Landing Pages
               .wedo__about Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident alias cum obcaecati expedita incidunt repellendus similique? Hic aspernatur laborum placeat in aliquam doloremque eveniet at illo assumenda vitae, consequuntur vero? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis nobis, eius tempora placeat, corporis nihil doloremque eveniet ratione ut, magni saepe quam sequi. Molestiae fugiat maiores illo neque quidem!
               btn.d__btn.d__btn-red More details
             .wedo__pic
               +image("content/device.png", "wedo__picture")
           a.scroll.scroll-tranparent(href='#adv')
             +icon("arrow-down", 'scroll__icon-tansparent')
-      
-      section.adv-section#wedo
-        .container.adv-container
-          .wedo__desc.wedo__desc-secondpage#adv
+
+                   
+          .wedo__desc.wedo__desc-mac
             .wedo__pic
               +image("content/mac.png", "wedo__picture")
+            .wedo__text.wedo__text-mac
+              .wedo__name.wedo__name-mac Advertising
+              .wedo__about.wedo__about-mac Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident alias cum obcaecati expedita incidunt repellendus similique? Hic aspernatur laborum placeat in aliquam doloremque eveniet at illo assumenda vitae, consequuntur vero? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis nobis, eius tempora placeat, corporis nihil doloremque eveniet ratione ut, magni saepe quam sequi. Molestiae fugiat maiores illo neque quidem!
+              btn.d__btn.d__btn-red More details   
+          a.scroll.scroll-tranparent(href='#adv')
+            +icon("arrow-down", 'scroll__icon-tansparent')
+
+
+          .wedo__desc.wedo__desc-kit
             .wedo__text
-              .wedo__title.wedo__title-secondpage Advertising
+              .wedo__name Marketing Kit
               .wedo__about Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident alias cum obcaecati expedita incidunt repellendus similique? Hic aspernatur laborum placeat in aliquam doloremque eveniet at illo assumenda vitae, consequuntur vero? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis nobis, eius tempora placeat, corporis nihil doloremque eveniet ratione ut, magni saepe quam sequi. Molestiae fugiat maiores illo neque quidem!
               btn.d__btn.d__btn-red More details
-          //a.scroll.scroll-tranparent(href='#expend')
-            //+icon("arrow-down", 'scroll__icon-tansparent')
+            .wedo__pic
+              +image("content/kit.png", "wedo__picture")
+          a.scroll.scroll-tranparent(href='#adv')
+            +icon("arrow-down", 'scroll__icon-tansparent')
+      
+         
 
     include ./templates/entry.pug
