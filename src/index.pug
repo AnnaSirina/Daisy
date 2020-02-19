@@ -42,16 +42,20 @@ html(lang="en")
           ul.receive__points
             - 
               var items = [
-                ['Clients', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?'],
-                ['Profit', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?'],
-                ['Marketing', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?'],
-                ['ADV.', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?']
+                ['user','Clients', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?'],
+                ['pencil','Profit', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?'],
+                ['message','Marketing', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?'],
+                ['insta','ADV.', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta suscipit explicabo totam quibusdam beatae asperiores blanditiis magni placeat, quam, quae fugiat numquam culpa eos odit similique minima doloremque distinctio?']
               ]
             each item in items
-              li.receive__desc-item
+              li.receive__desc-item        
+                .hx
+                  .hexagon.base
+                    +icon(`${item[0]}`, 'hexagon__icons')           
+                  .hexagon.border
                 .receive__hexagon
-                .receive__topic #{item[0]}
-                .receive__value #{item[1]}
+                .receive__topic #{item[1]}
+                .receive__value #{item[2]}
           a.scroll.scroll-tranparent(href='#expend')
             +icon("arrow-down", 'scroll__icon-tansparent')
 
@@ -102,7 +106,37 @@ html(lang="en")
               +image("content/kit.png", "wedo__picture")
           a.scroll.scroll-tranparent(href='#adv')
             +icon("arrow-down", 'scroll__icon-tansparent')
-      
-         
+
+      section.wedo-team
+        .container.team-container
+          h2.team-title
+            span.team-title-grey our
+            span.team-title-red team   
+          
+          ul.team__list
+            - 
+              var items = [
+                ['Tomothy','Bowmen', 'Marketing'],
+                ['Steve','Jones', 'CEO'],
+                ['Hellen','Jones', 'Clients']
+              ]
+            each item in items
+              li.team__item 
+                .team__hexagon 
+                  .team__hexagon-inside
+                    .team__hexagon-image
+                h3.team__name
+                  span.team-title-grey #{item[0]}
+                  span.team-title-red  #{item[1]}
+                h4.team__desc #{item[2]}
+                - var icons = ['insta', 'vk', 'github']
+                  ul.socials
+                    each item in icons
+                      li.socials__item
+                        a(href="").social__link
+                        +icon(`${item}`, 'socials__icons')
+          a.scroll.scroll-tranparent(href='#adv')
+            +icon("arrow-down", 'scroll__icon-tansparent')
+          
 
     include ./templates/entry.pug
