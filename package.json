@@ -61,10 +61,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnnaSirina/ls-profile.git"
+    "url": "git+https://github.com/AnnaSirina/Daisy.git"
   },
   "bugs": {
-    "url": "https://github.com/AnnaSirina/ls-profile/issues"
+    "url": "https://github.com/AnnaSirina/Daisy/issues"
   },
-  "homepage": "https://github.com/AnnaSirina/ls-profile#readme"
+  "homepage": "https://github.com/AnnaSirina/Daisy#readme"
 }

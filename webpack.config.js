@@ -9,7 +9,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
-  const publicPath = '/ls-profile/';
+  const publicPath = '/Daisy/';
 
   const pcss = {
     test: /\.(p|post|)css$/,
@@ -46,39 +46,39 @@ module.exports = (env, argv) => {
   const svg = {
     test: /\.svg$/,
     use: [{
-        loader: "svg-sprite-loader",
-        options: {
-          extract: true,
-          spriteFilename: svgPath => `sprite${svgPath.substr(-4)}`
-        }
-      },
-      "svg-transform-loader",
-      {
-        loader: "svgo-loader",
-        options: {
-          plugins: [{
-              removeTitle: true
-            },
-            {
-              removeAttrs: {
-                attrs: "(fill|stroke)"
-              }
-            }
-          ]
-        }
+      loader: "svg-sprite-loader",
+      options: {
+        extract: true,
+        spriteFilename: svgPath => `sprite${svgPath.substr(-4)}`
       }
+    },
+      "svg-transform-loader",
+    {
+      loader: "svgo-loader",
+      options: {
+        plugins: [{
+          removeTitle: true
+        },
+        {
+          removeAttrs: {
+            attrs: "(fill|stroke)"
+          }
+        }
+        ]
+      }
+    }
     ]
   };
 
   const pug = {
     test: /\.pug$/,
     oneOf: [{
-        resourceQuery: /^\?vue/,
-        use: ["pug-plain-loader"]
-      },
-      {
-        use: ["pug-loader"]
-      }
+      resourceQuery: /^\?vue/,
+      use: ["pug-plain-loader"]
+    },
+    {
+      use: ["pug-loader"]
+    }
     ]
   };
 
